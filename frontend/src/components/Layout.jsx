@@ -1,0 +1,30 @@
+import React from "react";
+import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
+import { Outlet } from "react-router-dom";
+
+
+const Layout = () => {
+  return (
+    <div className="flex min-h-screen bg-gray-900">
+      
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col">
+        
+        {/* Navbar */}
+
+        <Navbar />
+        {/* Page Content */}
+        <main className="p-6">
+          <Outlet />
+        </main>
+        
+      </div>
+    </div>
+  );
+};
+
+export default Layout;
